@@ -1,3 +1,5 @@
+//Integrantes: Kevin Ribas, Caio Vasconcellos, Nathan Berger, Héctor Tavares
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
