@@ -108,14 +108,7 @@ public class Biblioteca {
                     }
                     break;
                 case 7:
-                    System.out.println("Digite o nome do usuário: ");
-                    String nomeUsuario = input.nextLine();
-                    System.out.println("Digite o ID do usuário: ");
-                    int idUsuario = input.nextInt();
-                    System.out.println("Digite o telefone do usuário: ");
-                    String telefoneUsuario = input.next();
-                    System.out.println("Digite o endereço do usuário: ");
-                    String enderecoUsuario = input.next();
+                    usuarios.add(criarUsuario());
                     break;
                 case 8:
                     for (Usuario u : usuarios) {
@@ -144,14 +137,14 @@ public class Biblioteca {
         System.out.println("0 - Sair");
     }
 
-    public static void criarUsuario() {
+    public static Usuario criarUsuario() {
         System.out.println("Qual o nome do usuario? ");
         Scanner scanner = new Scanner(System.in);
         String nome = scanner.nextLine();
         String id = String.valueOf(Math.random());
         Usuario novoUsuario = new Usuario(nome, id);
-
-        System.out.println("Usuario criado com sucesso");
+        scanner.close();
+        return novoUsuario;
     }
 
     public static class Livro {
